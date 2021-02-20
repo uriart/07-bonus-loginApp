@@ -10,19 +10,9 @@ import { map } from 'rxjs/operators';
 export class AuthService {
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
-  private apikey = 'AIzaSyD4YtIONO_jY4k0U--v2h4ea17vB-rB-TA';
+  private apikey = 'API_KEY';
 
   userToken: string;
-
-  // Crear nuevo usuario
-  // https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]
-  // NO https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=[API_KEY]
-
-
-  // Login
-  // https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
-  // NO https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=[API_KEY]
-
 
   constructor( private http: HttpClient ) {
     this.leerToken();
